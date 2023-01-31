@@ -1,12 +1,16 @@
 {
   "name": "@shelf/stylelint-config",
   "version": "0.0.0",
-  "description": "Reusable stylelint config for scss and styled-components",
+  "description": "Shelf's reusable stylelint config. Covering CSS, SCSS, HTML, React inline styles, and Styled Components. Follows best practices and streamlines your development process.",
   "license": "MIT",
   "author": {
     "name": "Andrii Myroniuk",
     "email": "andrii.myroniuk@shelf.io",
     "url": "https://shelf.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shelfio/stylelint-config"
   },
   "main": "index.js",
   "files": [
@@ -29,6 +33,19 @@
   "babel": {
     "extends": "@shelf/babel-config/backend"
   },
+  "keywords": [
+    "reusable stylelint config",
+    "stylelint configuration",
+    "shared stylelint rules",
+    "stylelint preset",
+    "stylelint configuration package",
+    "stylelint best practices",
+    "stylelint config sharing",
+    "stylelint config repository",
+    "stylelint config library",
+    "stylelint configuration npm package",
+    "stylelint"
+  ],
   "prettier": "@shelf/prettier-config",
   "dependencies": {},
   "devDependencies": {
