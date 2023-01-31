@@ -1,19 +1,24 @@
-# xxxxxx [![CircleCI](https://circleci.com/gh/shelfio/xxxxxx/tree/master.svg?style=svg)](https://circleci.com/gh/shelfio/xxxxxx/tree/master)![](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
+# @shelf/stylelint-config [![CircleCI](https://circleci.com/gh/shelfio/stylelint-config/tree/master.svg?style=svg)](https://circleci.com/gh/shelfio/stylelint-config/tree/master)![](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
 
-> xxxxxx description
+> Shelf's reusable stylelint config which covers:
+>  - CSS
+>  - SCSS
+>  - HTML
+>  - React inline styles
+>  - Styled Components
 
 ## Install
 
 ```
-$ yarn add @shelf/xxxxxx
+$ yarn add @shelf/stylelint-config
 ```
 
 ## Usage
 
 ```js
-const {getFoo} = require('@shelf/xxxxxx');
-
-getFoo();
+{
+  extends: '@shelf/stylelint-config'
+}
 ```
 
 ## Publish
