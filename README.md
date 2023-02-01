@@ -1,19 +1,19 @@
-# xxxxxx [![CircleCI](https://circleci.com/gh/shelfio/xxxxxx/tree/master.svg?style=svg)](https://circleci.com/gh/shelfio/xxxxxx/tree/master)![](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
+# @shelf/stylelint-config [![CircleCI](https://circleci.com/gh/shelfio/stylelint-config/tree/master.svg?style=svg&circle-token=fb96286fdf74908dd97ef9ae569cd68eb9a2ccd5)](https://circleci.com/gh/shelfio/stylelint-config/tree/master)![](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
 
-> xxxxxx description
+> Shelf's reusable stylelint config provides a comprehensive and efficient solution for ensuring consistency in your CSS, SCSS, HTML, React inline styles, and Styled Components. This config covers best practices for styling and helps you maintain a consistent codebase for your projects. With Shelf's reusable stylelint config, you can streamline your workflow and avoid common styling issues, making your development process smoother and more efficient.
 
 ## Install
 
 ```
-$ yarn add @shelf/xxxxxx
+$ yarn add @shelf/stylelint-config
 ```
 
 ## Usage
 
 ```js
-const {getFoo} = require('@shelf/xxxxxx');
-
-getFoo();
+{
+  extends: '@shelf/stylelint-config'
+}
 ```
 
 ## Publish
