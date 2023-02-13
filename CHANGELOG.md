@@ -1,3 +1,12 @@
+<a name="1.0.0"></a>
+## 1.0.0 (2023-02-13)
+
+
+#### Bug Fixes
+
+* remove prepack ([fa79717f](https://github.com/shelfio/stylelint-config/commit/fa79717f))
+
+
 <a name="0.0.1"></a>
 ### 0.0.1 (2023-02-01)
 
