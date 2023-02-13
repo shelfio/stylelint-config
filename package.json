@@ -1,6 +1,6 @@
 {
   "name": "@shelf/stylelint-config",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Shelf's reusable stylelint config. Covering CSS, SCSS, HTML, React inline styles, and Styled Components. Follows best practices and streamlines your development process.",
   "keywords": [
     "reusable stylelint config",
