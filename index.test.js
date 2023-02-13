@@ -76,6 +76,6 @@ describe('stylelint-config', () => {
     });
 
     expect(result.errored).toBeTruthy();
-    expect(result.results[0].warnings).toHaveLength(27);
+    expect(result.results[0].warnings).toHaveLength(34);
   });
 });
