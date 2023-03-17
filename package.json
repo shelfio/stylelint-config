@@ -68,7 +68,7 @@
     "prettier": "2.8.4",
     "react": "18.2.0",
     "styled-components": "5.3.6",
-    "stylelint": "15.2.0"
+    "stylelint": "15.3.0"
   },
   "peerDependencies": {
     "stylelint": "^15.2.0"
