@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from "styled-components";
 
 const myvar = 'my-counter';
 
@@ -15,6 +15,23 @@ const StyledComponent = styled.div`
     top: 0;
     background: #123450aa;
     counter-reset: ${myvar};
+
+    ${({isLoading}) =>
+      !isLoading
+        ? css`
+          .rt-tr:not(:hover) .Table {
+            opacity: 0;
+          }
+
+          .rt-tr:not(:hover) .Table {
+            opacity: 0;
+          }
+        `
+        : css`
+          .rt-tr {
+            pointer-events: none;
+          }
+        `}
 
     &[title~='text'] {
       color: rgb(0, 0, 0);
