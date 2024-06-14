@@ -25,6 +25,8 @@
     "email": "andrii.myroniuk@shelf.io",
     "url": "https://shelf.io"
   },
+  "type": "module",
+  "exports": "./index.js",
   "main": "index.js",
   "files": [
     "index.js"
@@ -36,23 +38,14 @@
     "test": "TZ=UTC jest"
   },
   "lint-staged": {
-    "*.{html,md,yml}": [
-      "prettier --write"
-    ],
-    "*.{js,ts,json}": [
-      "eslint --fix"
-    ]
+    "*.{html,md,yml}": "prettier --write",
+    "*.{js,ts,json}": "eslint --fix"
   },
   "prettier": "@shelf/prettier-config",
   "dependencies": {
-    "@stylelint/postcss-css-in-js": "0.38.0",
-    "postcss-html": "1.5.0",
-    "postcss-syntax": "0.36.2",
-    "stylelint-config-prettier": "9.0.5",
-    "stylelint-config-recommended": "11.0.0",
-    "stylelint-config-recommended-scss": "9.0.1",
-    "stylelint-config-styled-components": "0.1.1",
-    "stylelint-scss": "4.6.0"
+    "postcss-styled-syntax": "0.6.4",
+    "stylelint-config-standard-scss": "13.1.0",
+    "stylelint-config-styled-components": "0.1.1"
   },
   "devDependencies": {
     "@shelf/eslint-config": "3.15.1",
@@ -69,13 +62,13 @@
     "prettier": "3.3.2",
     "react": "18.3.1",
     "styled-components": "6.1.11",
-    "stylelint": "15.6.0"
+    "stylelint": "16.6.1"
   },
   "peerDependencies": {
-    "stylelint": "^15.2.0"
+    "stylelint": "^16"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=18.12.0"
   },
   "publishConfig": {
     "access": "public"

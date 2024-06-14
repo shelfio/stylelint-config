@@ -1,6 +1,5 @@
-'use strict';
-
-module.exports = {
+/** @type {import("stylelint").Config} */
+const config = {
   rules: {
     'shorthand-property-no-redundant-values': true,
     'selector-attribute-quotes': 'always',
@@ -21,17 +20,16 @@ module.exports = {
     'length-zero-no-unit': true,
     'at-rule-no-vendor-prefix': true,
   },
-  extends: ['stylelint-config-recommended', 'stylelint-config-prettier'],
+  extends: ['stylelint-config-recommended'],
   overrides: [
     {
       files: '**/*.{js,ts,tsx}',
-      customSyntax: '@stylelint/postcss-css-in-js',
+      customSyntax: 'postcss-styled-syntax',
       extends: ['stylelint-config-styled-components'],
     },
     {
       files: ['**/*.scss'],
-      customSyntax: 'postcss-scss',
-      extends: ['stylelint-config-recommended-scss'],
+      extends: ['stylelint-config-standard-scss'],
     },
     {
       files: ['**/*.html'],
@@ -39,3 +37,5 @@ module.exports = {
     },
   ],
 };
+
+export default config;
