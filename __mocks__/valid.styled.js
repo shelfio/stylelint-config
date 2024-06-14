@@ -41,7 +41,7 @@ const StyledComponent = styled.div`
       color: #000;
     }
 
-    @media (max-resolution: 900dpi) {
+    @media (resolution <= 900dpi) {
       .foo {
         color: #000;
       }

@@ -18,27 +18,35 @@ $var: my-counter;
     color: rgb(0, 0, 0)
   }
 
-  a:after { color: pink; }
+  a:after {
+    color: pink;
+  }
 
   &:not(a).foo:not(:empty) {
     color: #fff;
   }
 
-  @keyframes foo { from {
-    color: red;
-  } to {
+  @keyframes foo {
+    from {
+      color: red;
+    }
+
+    to {
       color: blue;
-    } }
+    }
+  }
 
   input::placeholder {
     color: #000;
   }
 
-  @media (max-resolution: 900dpi) {
+  @media (resolution > 900dpi) {
     .foo {
       color: #000;
     }
   }
 
-  @viewport { orientation: landscape; }
+  @viewport {
+    orientation: landscape;
+  }
 }

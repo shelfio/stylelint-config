@@ -1,6 +1,8 @@
 /** @type {import("stylelint").Config} */
 const config = {
+  extends: ['stylelint-config-standard'],
   rules: {
+    'rule-empty-line-before': ['always', {ignore: ['inside-block']}],
     'shorthand-property-no-redundant-values': true,
     'selector-attribute-quotes': 'always',
     'font-family-name-quotes': 'always-where-recommended',
@@ -20,20 +22,14 @@ const config = {
     'length-zero-no-unit': true,
     'at-rule-no-vendor-prefix': true,
   },
-  extends: ['stylelint-config-recommended'],
   overrides: [
     {
       files: '**/*.{js,ts,tsx}',
       customSyntax: 'postcss-styled-syntax',
-      extends: ['stylelint-config-styled-components'],
     },
     {
       files: ['**/*.scss'],
       extends: ['stylelint-config-standard-scss'],
-    },
-    {
-      files: ['**/*.html'],
-      customSyntax: 'postcss-html',
     },
   ],
 };
