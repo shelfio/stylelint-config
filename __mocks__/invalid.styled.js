@@ -1,68 +1,112 @@
-import React from 'react';
+// This comment should fail due to lack of whitespace inside
+
 import styled from 'styled-components';
 
-const myvar = 'my-counter';
+const InvalidColor = styled.div`
+  /*color-no-invalid-hex*/
+  color: #zzzzzz;
+`;
 
-const StyledComponent = styled.div`
-  .some-selector-custom-rules {
-    border-radius: 1px 2px 1px 2px;
-    font: 1em Times New Roman, Times, serif;
-    color: lch(56.29% 19.86 10 / 15%);
-    font-weight: bold;
-    opacity: 50%;
-    display: -webkit-flex;
-    -webkit-transform: scale(1);
-    top: 0px;
-    background: #12345aa;
-    counter-reset: ${myvar};
+const AlphaValue = styled.div`
+  /*alpha-value-notation*/
+  opacity: 50%;
+`;
 
-    &[title='flower'] {
-      color: rgb(0 0 0);
-    }
+const ColorFunction = styled.div`
+  /*color-function-notation*/
+  color: color(display-p3 0.5 0.4 0.3);
+`;
 
-    a::after {
-      color: pink;
-    }
+const FontWeight = styled.div`
+  /*font-weight-notation*/
+  font-weight: bold;
+`;
 
-    &:not(a):not(div) {
-      color: #ffffff;
-    }
+/*import-notation*/
+const ImportNotation = styled.div`
+  @import url("styles.css");
+`;
 
-    @media (-o-max-device-pixel-ratio: 1/1) {
-    }
+/*selector-pseudo-element-colon-notation*/
+const PseudoElement = styled.div`
+  ::before {
+    content: '';
+  }
+`;
 
-    @keyframes foo {
-      from {
+/*declaration-property-value-no-unknown*/
+const UnknownProperty = styled.div`
+  foo-bar: 42;
+`;
+
+/*max-nesting-depth*/
+const NestingDepth = styled.div`
+  .nesting-1 {
+    .nesting-2 {
+      .nesting-3 {
+        .nesting-4 {
+          color: red;
+        }
       }
-      100% {
-      }
-    }
-
-    @import url('foo.css');
-
-    input::-moz-placeholder {
-    }
-
-    @-ms-viewport {
-      orientation: landscape;
     }
   }
 `;
 
-const MyComp = () => (
-  <div
-    style={{
-      borderRadius: '1px 2px 1px 2px',
-      font: '1em Times New Roman, Times, serif',
-      color: 'lch(56.29% 19.86 10 / 15%)',
-      fontWeight: 'bold',
-      opacity: '50%',
-      display: '-webkit-flex',
-      '-webkit-transform': 'scale(1)',
-      top: '0px',
-      background: '#12345aa',
-    }}
-  >
-    MyComp
-  </div>
-);
+/*selector-max-attribute*/
+const MaxAttribute = styled.div`
+  .max-attribute[class][data-attr][type][role] {
+    color: blue;
+  }
+`;
+
+/*selector-max-combinators*/
+const MaxCombinators = styled.div`
+  .combinators-1 > .combinators-2 + .combinators-3 ~ .combinators-4 {
+    color: green;
+  }
+`;
+
+/*selector-max-id*/
+const MaxId = styled.div`
+  #id1 #id2 {
+    color: yellow;
+  }
+`;
+
+/*selector-max-compound-selector*/
+const MaxCompoundSelector = styled.div`
+  .compound1.compound2.compound3.compound4 {
+    color: purple;
+  }
+`;
+
+/*selector-max-pseudo-class*/
+const MaxPseudoClass = styled.div`
+  .pseudo-class:hover:focus:active:checked {
+    color: orange;
+  }
+`;
+
+/*selector-max-type*/
+const MaxType = styled.div`
+  div span p ul {
+    color: brown;
+  }
+`;
+
+/*selector-max-universal*/
+const MaxUniversal = styled.div`
+  * * {
+    color: pink;
+  }
+`;
+
+/*color-named*/
+const NamedColor = styled.div`
+  color: red;
+`;
+
+/*color-hex-alpha*/
+const HexAlpha = styled.div`
+  color: #ff000080;
+`;

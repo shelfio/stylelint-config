@@ -18,7 +18,7 @@ describe('stylelint-config', () => {
     });
 
     expect(result.errored).toBeTruthy();
-    expect(result.results[0].warnings).toHaveLength(25);
+    expect(result.results[0].warnings).toHaveLength(66);
   });
 
   it('should pass valid scss', async () => {
@@ -37,7 +37,7 @@ describe('stylelint-config', () => {
     });
 
     expect(result.errored).toBeTruthy();
-    expect(result.results[0].warnings).toHaveLength(28);
+    expect(result.results[0].warnings).toHaveLength(30);
   });
 
   it('should pass valid html', async () => {
@@ -56,7 +56,7 @@ describe('stylelint-config', () => {
     });
 
     expect(result.errored).toBeTruthy();
-    expect(result.results[0].warnings).toHaveLength(33);
+    expect(result.results[0].warnings).toHaveLength(75);
   });
 
   it('should pass valid js', async () => {
@@ -76,6 +76,6 @@ describe('stylelint-config', () => {
     });
 
     expect(result.errored).toBeTruthy();
-    expect(result.results[0].warnings).toHaveLength(34);
+    expect(result.results[0].warnings).toHaveLength(37);
   });
 });
