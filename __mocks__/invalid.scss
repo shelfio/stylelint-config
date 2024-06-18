@@ -1,34 +1,89 @@
-$var: "my-counter";
+// This comment should fail due to lack of whitespace inside
+.invalid-color {
+  // color-no-invalid-hex
+  color: #zzzzzz;
+}
 
-.some-selector-custom-rules {
-  border-radius: 1px 2px 1px 2px;
-  font: 1em Times New Roman, Times, serif;
-  color: lch(56.29% 19.86 10 / 15%);
-  font-weight: bold;
+.alpha-value {
+  // alpha-value-notation
   opacity: 50%;
-  display: -webkit-flex;
-  -webkit-transform: scale(1);
-  top: 0px;
-  background: #12345aa;
-  counter-reset: $var;
+}
 
-  &[title=flower] {
-    color: rgb(0 0 0)
+.color-function {
+  // color-function-notation
+  color: color(display-p3 0.5 0.4 0.3);
+}
+
+.font-weight {
+  // font-weight-notation
+  font-weight: bold;
+}
+
+// import-notation
+@import url("styles.css");
+
+::before {
+  // selector-pseudo-element-colon-notation
+  content: '';
+}
+
+.unknown-property {
+  // declaration-property-value-no-unknown
+  foo-bar: 42;
+}
+
+// max-nesting-depth
+.nesting-1 {
+  .nesting-2 {
+    .nesting-3 {
+      .nesting-4 {
+        color: red;
+      }
+    }
   }
+}
 
-  a::after { color: pink; }
+// selector-max-attribute
+.max-attribute[class][data-attr][type][role] {
+  color: blue;
+}
 
-  &:not(a):not(div) {
-    color: #ffffff;
-  }
+// selector-max-combinators
+.combinators-1 > .combinators-2 + .combinators-3 ~ .combinators-4 {
+  color: green;
+}
 
-  @media (-o-max-device-pixel-ratio: 1/1) {}
+// selector-max-id
+#id1 #id2 {
+  color: yellow;
+}
 
-  @keyframes foo { from {} 100% {} }
+// selector-max-compound-selector
+.compound1.compound2.compound3.compound4 {
+  color: purple;
+}
 
-  @import url("foo.css");
+// selector-max-pseudo-class
+.pseudo-class:hover:focus:active:checked {
+  color: orange;
+}
 
-  input::-moz-placeholder {}
+// selector-max-type
+div span p ul {
+  color: brown;
+}
 
-  @-ms-viewport { orientation: landscape; }
+// selector-max-universal
+* * {
+  color: pink;
+}
+
+// color-named
+.named-color {
+  color: red;
+}
+
+// color-hex-alpha
+.hex-alpha {
+  color: #ff000080;
 }
