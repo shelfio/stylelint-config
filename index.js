@@ -25,7 +25,7 @@ module.exports = {
   overrides: [
     {
       files: '**/*.{js,ts,tsx}',
-      customSyntax: '@stylelint/postcss-css-in-js',
+      customSyntax: 'postcss-styled-syntax',
     },
     {
       files: ['**/*.scss'],
