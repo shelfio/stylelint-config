@@ -20,6 +20,7 @@ module.exports = {
     'selector-max-type': 3,
     'selector-class-pattern': null,
     'selector-id-pattern': null,
+    'keyframes-name-pattern': null,
     'selector-max-universal': 1,
     'color-named': 'never',
     'color-hex-alpha': 'never',
