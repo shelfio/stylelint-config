@@ -29,7 +29,7 @@ module.exports = {
       files: '**/*.{js,ts,tsx}',
       customSyntax: 'postcss-styled-syntax',
       rules: {
-        'media-query-no-invalid': false,
+        'media-query-no-invalid': null,
       },
     },
     {
@@ -37,7 +37,7 @@ module.exports = {
       customSyntax: 'postcss-scss',
       extends: ['stylelint-config-recommended-scss'],
       rules: {
-        'media-query-no-invalid': false,
+        'media-query-no-invalid': null,
       },
     },
     {
