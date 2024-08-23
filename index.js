@@ -1,9 +1,9 @@
 'use strict';
 
+/** @type {import("stylelint").Config} */
 module.exports = {
   extends: ['stylelint-config-standard'],
   rules: {
-    'declaration-property-value-no-unknown': true,
     'selector-pseudo-element-colon-notation': 'single',
     'import-notation': 'string',
     'font-weight-notation': 'numeric',
@@ -18,6 +18,8 @@ module.exports = {
     'selector-max-compound-selectors': 3,
     'selector-max-pseudo-class': 3,
     'selector-max-type': 3,
+    'selector-class-pattern': null,
+    'selector-id-pattern': null,
     'selector-max-universal': 1,
     'color-named': 'never',
     'color-hex-alpha': 'never',
@@ -25,12 +27,18 @@ module.exports = {
   overrides: [
     {
       files: '**/*.{js,ts,tsx}',
-      customSyntax: '@stylelint/postcss-css-in-js',
+      customSyntax: 'postcss-styled-syntax',
+      rules: {
+        'media-query-no-invalid': null,
+      },
     },
     {
       files: ['**/*.scss'],
       customSyntax: 'postcss-scss',
       extends: ['stylelint-config-recommended-scss'],
+      rules: {
+        'media-query-no-invalid': null,
+      },
     },
     {
       files: ['**/*.html'],
