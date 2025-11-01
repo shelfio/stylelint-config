@@ -37,7 +37,7 @@
   "prettier": "@shelf/prettier-config",
   "dependencies": {
     "postcss-html": "1.7.0",
-    "postcss-styled-syntax": "0.6.4",
+    "postcss-styled-syntax": "0.7.1",
     "postcss-syntax": "0.36.2",
     "stylelint-config-recommended": "15.0.0",
     "stylelint-config-recommended-scss": "14.1.0",
