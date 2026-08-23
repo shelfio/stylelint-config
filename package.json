@@ -30,7 +30,7 @@
     "index.js"
   ],
   "scripts": {
-    "lint": "yarn lint:ci --fix",
+    "lint": "pnpm lint:ci --fix",
     "lint:ci": "eslint .",
     "test": "TZ=UTC node --experimental-vm-modules ./node_modules/jest/bin/jest.js"
   },
