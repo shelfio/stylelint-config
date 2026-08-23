@@ -78,5 +78,6 @@
     "*.{js,ts,json}": [
       "eslint --fix"
     ]
-  }
+  },
+  "packageManager": "pnpm@11.18.0"
 }
