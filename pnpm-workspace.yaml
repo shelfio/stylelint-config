@@ -2,3 +2,4 @@ overrides:
   'eslint-plugin-barrel-files>oxc-resolver': 11.19.1
 allowBuilds:
   '@swc/core': false
+lockfile: true
