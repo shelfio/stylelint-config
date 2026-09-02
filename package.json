@@ -30,11 +30,10 @@
     "index.js"
   ],
   "scripts": {
-    "lint": "pnpm lint:ci --fix",
-    "lint:ci": "eslint .",
+    "lint": "oxfmt && eslint . --fix",
+    "lint:ci": "oxfmt --check && eslint .",
     "test": "TZ=UTC node --experimental-vm-modules ./node_modules/jest/bin/jest.js"
   },
-  "prettier": "@shelf/prettier-config",
   "dependencies": {
     "postcss-html": "1.7.0",
     "postcss-styled-syntax": "0.6.4",
@@ -46,7 +45,7 @@
   },
   "devDependencies": {
     "@shelf/eslint-config": "7.2.0",
-    "@shelf/prettier-config": "1.0.0",
+    "@shelf/prettier-config": "1.1.1",
     "@shelf/tsconfig": "0.2.0",
     "@swc/core": "1.16.1",
     "@swc/jest": "0.2.39",
@@ -56,7 +55,7 @@
     "husky": "9.1.5",
     "jest": "30.4.2",
     "lint-staged": "15.2.9",
-    "prettier": "3.3.3",
+    "oxfmt": "0.64.0",
     "react": "18.3.1",
     "styled-components": "6.1.12",
     "stylelint": "16.8.2",
@@ -73,9 +72,10 @@
   },
   "lint-staged": {
     "*.{html,md,yml}": [
-      "prettier --write"
+      "oxfmt --no-error-on-unmatched-pattern"
     ],
     "*.{js,ts,json}": [
+      "oxfmt --no-error-on-unmatched-pattern",
       "eslint --fix"
     ]
   },
