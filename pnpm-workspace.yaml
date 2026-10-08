@@ -4,3 +4,4 @@ allowBuilds:
   '@swc/core': false
   unrs-resolver: false
 lockfile: true
+pmOnFail: ignore
