@@ -5,3 +5,5 @@ allowBuilds:
   unrs-resolver: false
 lockfile: true
 pmOnFail: ignore
+minimumReleaseAgeExclude:
+  - '@shelf/*'
